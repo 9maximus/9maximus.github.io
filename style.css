@@ -139,22 +139,34 @@ span{
     justify-content: center;
     align-items: flex-end;
 }
-.hero-disclaimer{
-    position: relative;
-    width: 350px;
-    height: 300px;
-}
+
+
 .hero-disclaimer-image{
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
 }
 .hero-overlay{
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 75%;
+    height: 70;
+    animation: hero-overlay 15s linear infinite;
+    
 }
+
+@keyframes hero-overlay {
+    0%, 33.33% {
+        transform: translateX(0);
+    }
+    33.33%, 66.66% {
+        transform: translateX(-33.33%);
+    }
+    66.66%, 100% {
+        transform: translateX(-66.66%);
+    }
+}
+
 .hero-msg{
     background-color: white;
     color: black;
